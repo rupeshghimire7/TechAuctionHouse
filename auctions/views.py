@@ -9,5 +9,11 @@ def index(request):
 def login(request):
     return render(request, 'auctions/login.html')
 
+def item(request):
+    return render(request, 'auctions/item.html')
+
+def about(request):
+    return render(request, 'auctions/about.html')
+
 def greet(request,title):
     return HttpResponse(f'Hello { title }')

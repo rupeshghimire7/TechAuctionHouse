@@ -10,6 +10,9 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #6d6875;
+    color: white;
+    box-shadow: 0 0 5px rgba(0,0,0,0.8);
 }
 .header > h1{
     margin: auto 10px;
