@@ -10,20 +10,15 @@
     <title>Item Page</title>
   </head>
   <body>
-{% extends 'auctions/layout.html' %}
-
-{% block head %}
+    {% extends 'auctions/layout.html' %} {% block head %}
     <link rel="stylesheet" href="{% static 'auctions/item.css' %}" />
-{% endblock %}
-
-{% block title %}
-{{title}}
-{% endblock %}
-
-{%block body %}
+    {% endblock %} {% block title %} {{title}} {% endblock %} {%block body %}
     <h1>Title</h1>
     <div class="item-container">
-      <img src="{% static 'images/macbook-pro-14-inch.jpg' %}" class="item-image" />
+      <img
+        src="{% static 'images/macbook-pro-14-inch.jpg' %}"
+        class="item-image"
+      />
       <div class="item-details">
         <h1 class="item-title">
           MacBook Pro 14" 8C CPU, 14C GPU, 16GB, 512GB SSD
