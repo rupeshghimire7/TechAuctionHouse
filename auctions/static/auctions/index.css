@@ -1,0 +1,13 @@
+/*styles for index.html*/ 
+
+#card-container{
+    display: flex;
+    gap: 20px;
+    overflow-x:scroll;
+}
+.card--cover-image{
+    width: 250px;
+}
+.card--title{
+    font-weight: 600;
+}

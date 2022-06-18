@@ -1,0 +1,5 @@
+/*styles for about.html*/ 
+.about-container{
+    display: flex;
+    align-items: center;
+}

@@ -1,3 +1,4 @@
+/*styles for items.html*/ 
 .item-container{
     display: flex;
     flex-wrap: nowrap;
