@@ -8,3 +8,6 @@ def index(request):
 
 def login(request):
     return render(request, 'auctions/login.html')
+
+def greet(request,title):
+    return HttpResponse(f'Hello { title }')
