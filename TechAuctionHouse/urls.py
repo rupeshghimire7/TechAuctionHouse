@@ -19,5 +19,5 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include(auctions.views) )
+    path('', include('auctions.urls'))
 ]
