@@ -2,4 +2,11 @@
 .item-container{
     display: flex;
     flex-wrap: nowrap;
+    justify-content: space-around;
+}
+.item-specs-list{
+    list-style-type: none;
+}
+.item-image{
+    width: 500px;
 }

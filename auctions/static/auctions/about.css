@@ -3,3 +3,6 @@
     display: flex;
     align-items: center;
 }
+.about-person-img{
+    width: 300px;
+}

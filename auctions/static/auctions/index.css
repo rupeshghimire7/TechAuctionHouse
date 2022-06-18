@@ -11,3 +11,8 @@
 .card--title{
     font-weight: 600;
 }
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

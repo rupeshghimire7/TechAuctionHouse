@@ -30,6 +30,7 @@ body {
   background-color: #212529;
   color: white;
   border: 1px solid #212529;
+  cursor: pointer;
   transition-duration: 400ms;
 }
 #nav-menu {
