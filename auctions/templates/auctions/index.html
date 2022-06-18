@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'auctions/style.css' %}" />
+
+    <title>Tech Auction House</title>
+  </head>
+  <body>
+    <div name="root" id="root">
+      <nav name="nav-bar" class="header">
+        <h1>Tech Auction House</h1>
+        <ul id="nav-menu">
+          <li>HOME</li>
+          <li>SHOP</li>
+          <li>CONTACT</li>
+          <li>ABOUT</li>
+          <li>
+            <img
+              src="./images/user.png"
+              alt="user icon"
+              class="header--avatar-image"
+            />
+          </li>
+        </ul>
+      </nav>
+      <h3>Computers</h3>
+      <!--card-category as title-->
+
+      <div id="card-container">
+        <!---each card is here-->
+        <div class="card">
+          <img
+            src="./images/cupboard-with-mirrors.png"
+            class="card--cover-image"
+          />
+          <div class="card-details">
+            <div class="card--title">Double cupboard with mirrors</div>
+          </div>
+        </div>
+        <!--end of each card-->
+      </div>
+    </div>
+  </body>
+</html>
