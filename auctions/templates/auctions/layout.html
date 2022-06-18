@@ -2,17 +2,44 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'auctions/style.css' %}" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{% static 'auctions/styles.css' %}" rel="stylesheet">
+
+    {% block head %}
+    {% endblock %}
+    
     <title>
         {% block title %}
         {% endblock %}
     </title>
 </head>
 <body>
+    <nav name="nav-bar" class="header">
+        <a href="{% url 'index' %}"><h1>Tech Auction House</h1></a>
+        <ul id="nav-menu">
+          <input type="text" name="search" class="search-bar"/>
+          <button name="submit-search" class="search-btn">SEARCH</button>
+
+          <li><a href="{% url 'contact' %}" >CONTACT</a></li>
+          <li><a href="{% url 'about' %}" >ABOUT</a></li>
+          <li>
+            <img
+              src="{% static 'images/user.png' %}"
+              alt="user icon"
+              class="header--avatar-image"
+            />
+          </li>
+        </ul>
+      </nav>
+
     {% block body %}
     {% endblock %}
 </body>

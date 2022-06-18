@@ -1,33 +1,24 @@
-{% load static %}
+{% extends 'auctions/layout.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="{% static 'auctions/style.css' %}" />
+{% block title %}
+ABOUT
+{% endblock %}
 
-    <title>ABOUT TEAM</title>
-  </head>
-  <body>
+{% block body %}
     <h1 class="about-heading">
       Behind 'TECH AUCTION HOUSE'
     </h1>
     <div class="about-container">
       <div class="about-person">
+<<<<<<< HEAD
         <div class="person-img-container">
         <img src="{% static 'images/samir.png' %}" class="about-person-img">
+=======
+        <img src="../static/images/user.png" class="about-person-img">
+>>>>>>> 8fc83591f6bffe47b624bea74cd076f5c18c0708
         <h3 class="about-person-name">
           Samir Gurung
         </h3>
       </div>
     </div>
-  </body>
-</html>
+{% endblock %}
