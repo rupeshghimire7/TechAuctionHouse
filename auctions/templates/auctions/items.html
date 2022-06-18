@@ -1,15 +1,14 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'auctions/style.css' %}" />
+{% extends 'auctions/layout.html' %}
+
+{% block head %}
     <link rel="stylesheet" href="{% static 'auctions/item.css' %}" />
-    <title>Item Page</title>
-</head>
-<body>
+{% endblock %}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{%block body %}
     <h1>Title</h1>
     <div class="item-container">
         <img src="" class="item-image" />
@@ -17,5 +16,4 @@
         <h1 class="item-title"></h1>
         </div>
     </div>
-</body>
-</html>
+{% endblock %}
