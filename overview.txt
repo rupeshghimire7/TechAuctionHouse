@@ -1,0 +1,18 @@
+TechAuctionHouse
+
+An e-commerce web application where tech related products are listed by people and allows other people to bid to the item/s they want and the highest bid gets the product/s.
+
+This web-app has features like:
+
+Login Page
+Home Page : List of all categories and few people's favourite items under each categories
+Category related page
+Item page
+Cart page on winning auction
+Payment page
+
+For each item:
+	--displayed as a card
+	--show highest bid
+	--time until the bidding ends
+	--contains cover image of item, product id, best-bid-price, time-remaining, available/sold status
