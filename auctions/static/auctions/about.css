@@ -4,5 +4,7 @@
     align-items: center;
 }
 .about-person-img{
-    width: 300px;
+    width: 400px;
+    height: 400px;
+    background-image: url("../images/samir-gurung.jpg")
 }
