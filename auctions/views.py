@@ -19,5 +19,5 @@ def about(request):
 
 
 def contact(request):
-    #return render(request, 'auctions/contact.html')
-    return HttpResponse("<h1>CONTACT PAGE!</h1> <br> <h6>Remove # from render one and remove HttpResponse after contact.html page is done.!!!</h6>")
+    return render(request, 'auctions/contact.html')
+    
