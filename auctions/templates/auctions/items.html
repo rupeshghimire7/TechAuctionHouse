@@ -5,66 +5,83 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/favicon.ico' %}"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="{% static 'auctions/style.css' %}" />
     <link rel="stylesheet" href="{% static 'auctions/items.css' %}" />
     <title>Item Page</title>
   </head>
   <body>
     <nav name="nav-bar" class="header">
-      <a href="{% url 'index' %}" class="nav-title"><h1>Tech Auction House</h1></a>
+      <a href="{% url 'index' %}">
+        <h1 class="nav-title">Tech Auction House</h1>
+      </a>
       <ul id="nav-menu">
-        <input type="text" name="search" class="search-bar"/>
+        <input type="text" name="search" class="search-bar" />
         <button name="submit-search" class="search-btn">SEARCH</button>
-
         <li><a href="{% url 'contact' %}" class="nav-link">CONTACT</a></li>
         <li><a href="{% url 'about' %}" class="nav-link">ABOUT</a></li>
+        <li></li>
         <li>
-          <li><a href="{% url 'login' %}" class="nav-link"> <img
-            src="{% static 'images/user.png' %}"
-            alt="user icon"
-            class="header--avatar-image"
+          <a href="{% url 'login' %}" class="nav-link">
+            <img
+              src="{% static 'images/user.png' %}"
+              alt="user icon"
+              class="header--avatar-image"
           /></a>
-          </li>
+        </li>
       </ul>
     </nav>
-
-    <h1>Title</h1>
-    <div class="item-container">
-      <img
-        src="{% static 'images/macbook-pro-14-inch.jpg' %}"
-        class="item-image"
-      />
-      <div class="item-details">
-        <h1 class="item-title">
-          MacBook Pro 14" 8C CPU, 14C GPU, 16GB, 512GB SSD
-        </h1>
-        <h4 class="item-subtitle">
-          MacBook Pro. The most powerful MacBook ever.
-          <p class="item-description">
-            With game-changing performance, an immersive 14-inch Retina display,
-            and all-day battery life, MacBook Pro puts power above all else. So
-            you can accomplish anything, anywhere.
-          </p>
-          <div class="item-specs-container">
-            <h3>Specifications</h3>
-            <ul class="item-specs-list">
-              <li>M1 Pro</li>
-              <li>8- Core CPU</li>
-              <li>14-Core GPU</li>
-              <li>16GB Unified Memory</li>
-              <li>16-core Neural Engine</li>
-              <li>14-inch Liquid Retina XDR display</li>
-              <li>
-                Three Thunderbolt 4 ports, HDMI port, SDXC card slot, MagSafe 3
-                port
-              </li>
-              <li>Magic Keyboard with Touch ID</li>
-              <li>Force Touch trackpad</li>
-              <li>140W USB-C Power Adapter</li>
-            </ul>
-          </div>
-        </h4>
+    <!-- start of root section -->
+    <section class="root">
+      <h1><!--Name of the Item-->Macbook Pro 14 Inch</h1>
+      <div class="item-container">
+        <img
+          src="{% static 'images/macbook-pro-14-inch.jpg' %}"
+          class="item-image"
+        />
+        <div class="item-details">
+          <h1 class="item-title">
+            MacBook Pro 14" 8C CPU, 14C GPU, 16GB, 512GB SSD
+          </h1>
+          <h4 class="item-subtitle">
+            MacBook Pro. The most powerful MacBook ever.
+            <p class="item-description">
+              With game-changing performance, an immersive 14-inch Retina
+              display, and all-day battery life, MacBook Pro puts power above
+              all else. So you can accomplish anything, anywhere.
+            </p>
+            <div class="item-specs-container">
+              <h3>Specifications</h3>
+              <ul class="item-specs-list">
+                <li>M1 Pro</li>
+                <li>8- Core CPU</li>
+                <li>14-Core GPU</li>
+                <li>16GB Unified Memory</li>
+                <li>16-core Neural Engine</li>
+                <li>14-inch Liquid Retina XDR display</li>
+                <li>
+                  Three Thunderbolt 4 ports, HDMI port, SDXC card slot, MagSafe
+                  3 port
+                </li>
+                <li>Magic Keyboard with Touch ID</li>
+                <li>Force Touch trackpad</li>
+                <li>140W USB-C Power Adapter</li>
+              </ul>
+            </div>
+          </h4>
+        </div>
       </div>
-    </div>
+    </section>
+    <!--end of root section-->
   </body>
 </html>

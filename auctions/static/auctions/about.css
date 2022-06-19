@@ -1,4 +1,4 @@
-/*for about.html*/
+/*styles for about.html*/
 .about-heading {
   text-align: center;
 }
@@ -26,6 +26,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
+  border: 1px solid ;
   background-position-x: center;
 }
 .person-name{
