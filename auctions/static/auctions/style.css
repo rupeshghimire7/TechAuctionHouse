@@ -57,42 +57,4 @@
     margin: auto 10px;
   }
   
-  /*for about.html*/
-  .about-heading {
-    text-align: center;
-  }
-  .about-container {
-    width: 50%;
-    margin: auto auto;
-    display: flex;
-    align-items: center;
-    position: relative;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-  .person {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .person-img {
-    width: 200px;
-    height: 200px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    background-position-x: center;
-  }
-  #samir-gurung-details > .person-img {
-    background-image: url("../images/samir-gurung.jpg");
-  }
-  #rupesh-ghimire-details > .person-img {
-    background-image: url("../images/samir-gurung.jpg");
-  }
-  #sailesh-ghimire-details > .person-img {
-    background-image: url("../images/samir-gurung.jpg");
-  }
-  #sandesh-gc-details > .person-img {
-    background-image: url("../images/sandesh-gc.jpg");
-  }
   
