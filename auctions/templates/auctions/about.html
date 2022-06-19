@@ -6,6 +6,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/favicon.ico' %}"
+      type="image/x-icon"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,57 +19,76 @@
     />
     <link rel="stylesheet" href="{% static 'auctions/style.css' %}" />
     <link rel="stylesheet" href="{% static 'auctions/about.css' %}" />
-    <title>About</title>
+    <title>About Us</title>
   </head>
- <body> 
-  <nav name="nav-bar" class="header">
-    <a href="{% url 'index' %}" class="nav-title"><h1>Tech Auction House</h1></a>
-    <ul id="nav-menu">
-      <input type="text" name="search" class="search-bar"/>
-      <button name="submit-search" class="search-btn">SEARCH</button>
+  <body>
+    <!-- nav bar beginning -->
+    <nav name="nav-bar" class="header">
+      <a href="{% url 'index' %}">
+        <h1 class="nav-title">Tech Auction House</h1>
+      </a>
+      <ul id="nav-menu">
+        <input type="text" name="search" class="search-bar" />
+        <button name="submit-search" class="search-btn">SEARCH</button>
+        <li><a href="{% url 'contact' %}" class="nav-link">CONTACT</a></li>
+        <li><a href="{% url 'about' %}" class="nav-link">ABOUT</a></li>
+        <li>
+          <a href="{% url 'login' %}" class="nav-link">
+            <img
+              src="{% static 'images/user.png' %}"
+              alt="user icon"
+              class="header--avatar-image"
+            />
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- nav bar ends here -->
 
-      <li><a href="{% url 'contact' %}" class="nav-link">CONTACT</a></li>
-      <li><a href="{% url 'about' %}" class="nav-link">ABOUT</a></li>
-      <li><a href="{% url 'login' %}" class="nav-link"> <img
-        src="{% static 'images/user.png' %}"
-        alt="user icon"
-        class="header--avatar-image"
-      /></a>
-      </li>
-    </ul>
-  </nav>
-<h1 class="about-heading">Team 'TECH AUCTION HOUSE'</h1>
-<div class="about-container">
-  <div class="person" id="samir-gurung-details">
-    <div class="person-img"></div>
-    <!-- <img src="../static/images/samir-gurung.png" class="person-img"> -->
-    <h3 class="person-name">Samir Gurung</h3>
-    <div class="person-details">IOE WRC</div>
-    <div class="roll-number">PAS076BCT032</div>
-  </div>
+    <!-- start of root section -->
+    <section class="root">
+      <div class="about-container">
+        <h1 class="about-heading">Team 'TECH AUCTION HOUSE'</h1>
+        <p>
+          The hardworking and dedicated team behind the development and
+          production of the Project 'Tech Auction House' :
+        </p>
 
-  <div class="person" id="rupesh-ghimire-details">
-    <div class="person-img" i></div>
-    <h3 class="person-name">Rupesh Ghimire</h3>
-    <div class="person-details">IOE WRC</div>
-    <div class="roll-number">PAS076BCT025</div>
-  </div>
+        <div class="team-photo-line">
+          <div class="person" id="samir-gurung-details">
+            <div class="person-img"></div>
+            <h3 class="person-name">Samir Gurung</h3>
+            <div class="person-details">IOE WRC</div>
+            <div class="roll-number">PAS076BCT032</div>
+            <div class="person-mail">sameergurung032@gmail.com</div>
+          </div>
 
-  <div class="person" id="sailesh-ghimire-details">
-    <div class="person-img"></div>
-    <h3 class="person-name">Sailesh Ghimire</h3>
-    <div class="person-details">IOE WRC</div>
-    <div class="roll-number">PAS076BCT030</div>
-  </div>
+          <div class="person" id="rupesh-ghimire-details">
+            <div class="person-img" i></div>
+            <h3 class="person-name">Rupesh Ghimire</h3>
+            <div class="person-details">IOE WRC</div>
+            <div class="roll-number">PAS076BCT025</div>
+            <div class="person-mail">rupeshghimire17@gmail.com</div>
+          </div>
 
-  <div class="person" id="sandesh-gc-details">
-    <div class="person-img"></div>
-    <h3 class="person-name">Sandesh GC</h3>
-    <div class="person-details">IOE WRC</div>
-    <div class="roll-number">PAS076BCT033</div>
-  </div>
-</div>
+          <div class="person" id="sailesh-ghimire-details">
+            <div class="person-img"></div>
+            <h3 class="person-name">Sailesh Ghimire</h3>
+            <div class="person-details">IOE WRC</div>
+            <div class="roll-number">PAS076BCT030</div>
+            <div class="person-mail">saileshghimire@gmail.com</div>
+          </div>
 
-
-</body>
+          <div class="person" id="sandesh-gc-details">
+            <div class="person-img"></div>
+            <h3 class="person-name">Sandesh GC</h3>
+            <div class="person-details">IOE WRC</div>
+            <div class="roll-number">PAS076BCT033</div>
+            <div class="person-mail">gcsandesh01@gmail.com</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--end of root section-->
+  </body>
 </html>

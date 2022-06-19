@@ -6,6 +6,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/favicon.ico' %}"
+      type="image/x-icon"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,26 +18,33 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="{% static 'auctions/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'auctions/contact.css' %}" />
 
     <title>Contact Us</title>
   </head>
   <body>
     <nav name="nav-bar" class="header">
-      <a href="{% url 'index' %}" class="nav-title"><h1>Tech Auction House</h1></a>
+      <a href="{% url 'index' %}">
+        <h1 class="nav-title">Tech Auction House</h1>
+      </a>
       <ul id="nav-menu">
-        <input type="text" name="search" class="search-bar"/>
+        <input type="text" name="search" class="search-bar" />
         <button name="submit-search" class="search-btn">SEARCH</button>
 
         <li><a href="{% url 'contact' %}" class="nav-link">CONTACT</a></li>
         <li><a href="{% url 'about' %}" class="nav-link">ABOUT</a></li>
-        <li><a href="{% url 'login' %}" class="nav-link"> <img
-          src="{% static 'images/user.png' %}"
-          alt="user icon"
-          class="header--avatar-image"
-        /></a>
+        <li>
+          <a href="{% url 'login' %}" class="nav-link">
+            <img
+              src="{% static 'images/user.png' %}"
+              alt="user icon"
+              class="header--avatar-image"
+          /></a>
         </li>
       </ul>
     </nav>
-    <h1>Contact Page</h1>
+    <section class="root">
+      <h1>Contact Page</h1>
+    </section>
   </body>
 </html>

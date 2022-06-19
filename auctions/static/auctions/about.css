@@ -1,10 +1,51 @@
-/*styles for about.html*/ 
-/* .about-container{
-    display: flex;
-    align-items: center;
-} */
-/* .person-img{
-    width: 400px;
-    height: 400px;
-    background-image: url("../images/samir-gurung.jpg")
-} */
+/*styles for about.html*/
+.about-heading {
+  text-align: center;
+}
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.team-photo-line {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 30px;
+}
+.person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.person-img {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 1px solid ;
+  background-position-x: center;
+}
+.person-name{
+    margin-bottom:4px;
+}
+.person-mail{
+    font-size: 13px;
+}
+#samir-gurung-details > .person-img {
+  background-image: url("../images/samir-gurung.jpg");
+}
+#rupesh-ghimire-details > .person-img {
+  background-image: url("../images/rupesh-ghimire.jpg");
+  background-position: 55% 65%;
+  background-size: 250%;
+}
+#sailesh-ghimire-details > .person-img {
+  background-image: url("../images/samir-gurung.jpg");
+}
+#sandesh-gc-details > .person-img {
+  background-image: url("../images/sandesh-gc.jpg");
+}
