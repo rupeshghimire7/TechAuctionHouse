@@ -14,6 +14,25 @@
     />
     <link rel="stylesheet" href="{% static 'auctions/style.css' %}" />
 
-    <title>Tech Auction House</title>
+    <title>Contact Us</title>
   </head>
+  <body>
+    <nav name="nav-bar" class="header">
+      <a href="{% url 'index' %}" class="nav-title"><h1>Tech Auction House</h1></a>
+      <ul id="nav-menu">
+        <input type="text" name="search" class="search-bar"/>
+        <button name="submit-search" class="search-btn">SEARCH</button>
+
+        <li><a href="{% url 'contact' %}" class="nav-link">CONTACT</a></li>
+        <li><a href="{% url 'about' %}" class="nav-link">ABOUT</a></li>
+        <li><a href="{% url 'login' %}" class="nav-link"> <img
+          src="{% static 'images/user.png' %}"
+          alt="user icon"
+          class="header--avatar-image"
+        /></a>
+        </li>
+      </ul>
+    </nav>
+    <h1>Contact Page</h1>
+  </body>
 </html>

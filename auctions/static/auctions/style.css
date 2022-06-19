@@ -1,47 +1,98 @@
 /*all global styles go in this page*/
 * {
-  font-family: Poppins, sans-serif;
-}
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #e9ecef;
-  color: #000000;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-.header > h1 {
-  margin: auto 10px;
-}
-.search-btn {
-  margin: 0 5px;
-  background-color: #f8f9fa;
-  color: #212529;
-  transition-duration: 600ms;
-  border: 1px solid #212529;
-  font-weight: 600;
-}
-.search-btn:hover {
-  background-color: #212529;
-  color: white;
-  border: 1px solid #212529;
-  cursor: pointer;
-  transition-duration: 400ms;
-}
-#nav-menu {
-  display: flex;
-  justify-content: space-evenly;
-  list-style-type: none;
-}
-#nav-menu > li {
-  margin: auto 10px;
-}
-.header--avatar-image {
-  width: 30px;
-  margin: auto 10px;
-}
+    font-family: Poppins, sans-serif;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e9ecef;
+    color: #000000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  .header > h1 {
+    margin: auto 10px;
+  }
+  .search-btn {
+    margin: 0 5px;
+    background-color: #f8f9fa;
+    color: #212529;
+    transition-duration: 600ms;
+    border: 1px solid #212529;
+    font-weight: 600;
+  }
+  .search-btn:hover {
+    background-color: #212529;
+    color: white;
+    border: 1px solid #212529;
+    cursor: pointer;
+    transition-duration: 400ms;
+  }
+  #nav-menu {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    font-weight: 600;
+  }
+  #nav-menu > li {
+    margin: auto 25px;
+    transition-duration: 500ms;
+  }
+  #nav-menu > li:hover {
+    transform: scale(1.1, 1.1);
+    transition-duration: 400ms;
+  }
+  .nav-link,
+  .nav-title {
+    color: #212529;
+    text-decoration: none;
+  }
+  .header--avatar-image {
+    width: 30px;
+    margin: auto 10px;
+  }
+  
+  /*for about.html*/
+  .about-heading {
+    text-align: center;
+  }
+  .about-container {
+    width: 50%;
+    margin: auto auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .person-img {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-position-x: center;
+  }
+  #samir-gurung-details > .person-img {
+    background-image: url("../images/samir-gurung.jpg");
+  }
+  #rupesh-ghimire-details > .person-img {
+    background-image: url("../images/samir-gurung.jpg");
+  }
+  #sailesh-ghimire-details > .person-img {
+    background-image: url("../images/samir-gurung.jpg");
+  }
+  #sandesh-gc-details > .person-img {
+    background-image: url("../images/sandesh-gc.jpg");
+  }
+  
