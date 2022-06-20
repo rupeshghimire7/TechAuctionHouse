@@ -1,66 +1,60 @@
 /*all global styles go in this page*/
-:root{
-  --grey-color: #d9d9d9;
-  --black-color: #252422;
-}
 * {
-    font-family: Poppins, sans-serif;
-  }
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: var(--bgcolor);
-  }
-  a{
-    text-decoration: none;
-    color: #212529;
-
-  }
-  .root{
-    margin: 0 20px;
-  }
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #e9ecef;
-    color: #2c0735;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
-  }
-  .nav-title{
-    margin-left: 20px;
-    font-size: 30px;
-  }
-  .search-btn {
-    margin: 0 5px;
-    background-color: #f8f9fa;
-    color: #2c0735;
-    transition-duration: 600ms;
-    border: 1px solid #212529;
-    font-weight: 600;
-  }
-  .search-btn:hover {
-    background-color: #2c0735;
-    color: white;
-    border: 1px solid #2c0735;
-    cursor: pointer;
-    transition-duration: 400ms;
-  }
-  #nav-menu {
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-    font-weight: 600;
-  }
-  #nav-menu > li {
-    margin: auto 25px;
-    transition-duration: 500ms;
-  }
-  #nav-menu > li:hover {
-    transform: scale(1.1, 1.1);
-    transition-duration: 400ms;
-  }
-  .header--avatar-image {
-    width: 25px;
-  }
+  font-family: Poppins, sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #252422;
+}
+.root {
+  margin: 0 20px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e9ecef;
+  color: #252422;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+.nav-title {
+  margin-left: 20px;
+  font-size: 30px;
+}
+.search-btn {
+  margin: 0 5px;
+  background-color: #f8f9fa;
+  color: #252422;
+  transition-duration: 600ms;
+  border: 1px solid #252422;
+  font-weight: 600;
+}
+.search-btn:hover {
+  background-color: #252422;
+  color: white;
+  border: 1px solid #252422;
+  cursor: pointer;
+  transition-duration: 400ms;
+}
+#nav-menu {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  font-weight: 600;
+}
+#nav-menu > li {
+  margin: auto 25px;
+  transition-duration: 500ms;
+}
+#nav-menu > li:hover {
+  transform: scale(1.1, 1.1);
+  transition-duration: 400ms;
+}
+.header--avatar-image {
+  width: 25px;
+}
