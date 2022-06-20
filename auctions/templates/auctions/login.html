@@ -42,13 +42,23 @@
         </li>
       </ul>
     </nav>
-
-    <form name="login-form" method="POST" action="login.py" id="login-form">
-      <label for="username"> Username </label>
-      <input name="username" type="text" required />
-      <label for="password"> Password </label>
-      <input name="password" type="password" required />
-      <button type="submit">Log In</button>
-    </form>
+    <section class="root">
+      <div class="form-container">
+        <h3 class="form-title">Login</h3>
+        <form
+          name="login-form"
+          method="POST"
+          action="login.py"
+          id="login-form"
+          class="form"
+        >
+          <label for="username"> Username </label>
+          <input name="username" type="text" required />
+          <label for="password"> Password </label>
+          <input name="password" type="password" required />
+          <button type="submit">Log In</button>
+        </form>
+      </div>
+    </section>
   </body>
 </html>

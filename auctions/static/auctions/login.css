@@ -1,22 +1,33 @@
 /*styles for login.html*/ 
-
-#login-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 9%;
-    margin-left: auto;
-    margin-right: auto;
-}
-label{
+/* label{
     align-self: flex-start;
-}
+} */
 input{
-    max-width: 350px
+    max-width: 350px;
+    min-width: 170px;
+    width: 150px;
 }
 button{
     margin: 7px;
     width: 75px;
     height: 30px;
     font-weight: 600;
+}
+.root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    margin: 10px auto;
+    background-color: #d9d9d9;
+}
+#login-form{
+    display: flex;
+    flex-direction: column;
 }
