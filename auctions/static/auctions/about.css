@@ -26,17 +26,19 @@
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
-  border: 1px solid ;
+  border: 2px solid transparent;
   background-position-x: center;
 }
-.person-name{
-    margin-bottom:4px;
+.person-name {
+  margin-bottom: 4px;
 }
-.person-mail{
-    font-size: 13px;
+.person-mail {
+  font-size: 13px;
 }
 #samir-gurung-details > .person-img {
   background-image: url("../images/samir-gurung.jpg");
+  background-position: 45% 22%;
+  background-size: 150%;
 }
 #rupesh-ghimire-details > .person-img {
   background-image: url("../images/rupesh-ghimire.jpg");
@@ -44,8 +46,12 @@
   background-size: 250%;
 }
 #sailesh-ghimire-details > .person-img {
-  background-image: url("../images/samir-gurung.jpg");
+  background-image: url("../images/sailesh-ghimire.jpg");
+  background-position: 45% 0;
+  background-size: 250%;
 }
 #sandesh-gc-details > .person-img {
   background-image: url("../images/sandesh-gc.jpg");
+  background-size: 150%;
+  background-position: 45% 30%;
 }
