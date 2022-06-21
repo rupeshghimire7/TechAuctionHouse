@@ -1,4 +1,33 @@
 /*styles for index.html*/
+.intro-to-site {
+  height: 75vh;
+  width: 100%;
+  background-image: url("../images/tech-auction-house-landing-page-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+.intro-to-site > h1,
+.intro-to-site > h3,
+.intro-to-site > p {
+  margin-left: 5px;
+  position: absolute;
+  left:10px;
+}
+.intro-to-site > h1 {
+  top: 170px;
+  font-size: 60px;
+}
+.intro-to-site > h3{
+  top: 130px;
+  font-size: 40px;
+}
+.intro-to-site > p{
+  top: 280px;
+}
+
 .card-container {
   display: flex;
   gap: 30px;
@@ -25,3 +54,20 @@
   margin-top: 0;
   font-size: 13px;
 }
+/* .bid-now-btn{
+  position: absolute;
+  left:20px;
+  top:350px;
+  background-color: #f8f9fa;
+  color: #252422;
+  transition-duration: 600ms;
+  border: 1px solid #252422;
+  font-weight: 600;
+}
+.bid-now-btn:hover {
+  background-color: #252422;
+  color: white;
+  border: 1px solid #252422;
+  cursor: pointer;
+  transition-duration: 400ms;
+} */
