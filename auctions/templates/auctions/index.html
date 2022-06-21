@@ -48,7 +48,7 @@
       <!--card-category as title for each section of cards-container-->
       <div class="card-container">
         <!---beginning of each card-->
-        <div class="card">
+          <div class="card">
           <img
             src="../static/images/macbook-pro-14-inch.jpg"
             class="card--cover-image"
@@ -57,19 +57,23 @@
             <h4 class="card--title">MacBook Pro 14"</h4>
             <p class="card--desc">14" MacBook Pro 512 GB RAM</p>
           </div>
-        </div>
+        </div> 
         <!--end of each card-->
+
         <!---beginning of each card-->
-        <div class="card">
-          <img
-            src="../static/images/macbook-pro-14-inch.jpg"
-            class="card--cover-image"
-          />
-          <div class="card-details">
-            <h4 class="card--title">MacBook Pro 14"</h4>
-            <p class="card--desc">14" MacBook Pro 512 GB RAM</p>
-          </div>
-        </div>
+{% for i in prod_names %}
+  <div class="card">
+  <img
+    src="../static/images/macbook-pro-14-inch.jpg"
+    class="card--cover-image"
+  />
+  <div class="card-details">
+    <h4 class="card--title"> {{i.product_name}} "</h4>
+  </div>
+</div> 
+{% endfor %}
+
+
         <!--end of each card-->
       </div>
     </section>
