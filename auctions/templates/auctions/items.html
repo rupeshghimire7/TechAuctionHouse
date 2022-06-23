@@ -43,42 +43,30 @@
     </nav>
     <!-- start of root section -->
     <section class="root">
-      <h1><!--Name of the Item-->Macbook Pro 14 Inch</h1>
+      <h1><!--Name of the Item-->{{product.product_name}}</h1>
       <div class="item-container">
         <img
-          src="{% static 'images/macbook-pro-14-inch.jpg' %}"
+          src="{{ product.image.url }}"
           class="item-image"
         />
         <div class="item-details">
           <h1 class="item-title">
-            MacBook Pro 14" 8C CPU, 14C GPU, 16GB, 512GB SSD
+            {{product.product_name}}
           </h1>
-          <h4 class="item-subtitle">
-            MacBook Pro. The most powerful MacBook ever.
             <p class="item-description">
-              With game-changing performance, an immersive 14-inch Retina
-              display, and all-day battery life, MacBook Pro puts power above
-              all else. So you can accomplish anything, anywhere.
+              {{product.description}}
             </p>
             <div class="item-specs-container">
               <h3>Specifications</h3>
-              <ul class="item-specs-list">
-                <li>M1 Pro</li>
-                <li>8- Core CPU</li>
-                <li>14-Core GPU</li>
-                <li>16GB Unified Memory</li>
-                <li>16-core Neural Engine</li>
-                <li>14-inch Liquid Retina XDR display</li>
-                <li>
-                  Three Thunderbolt 4 ports, HDMI port, SDXC card slot, MagSafe
-                  3 port
-                </li>
-                <li>Magic Keyboard with Touch ID</li>
-                <li>Force Touch trackpad</li>
-                <li>140W USB-C Power Adapter</li>
-              </ul>
+              <p class="item-specs-list">
+
+              </p>
+              <ul>
+              {% for spec in specs %}
+              <li>{{spec}}</li>
+              {% endfor %}
+            </ul>
             </div>
-          </h4>
         </div>
       </div>
     </section>

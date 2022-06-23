@@ -6,6 +6,7 @@ class Product(models.Model):
     category = models.CharField(max_length=50)
     price = models.FloatField(default=50000)
     description = models.CharField(max_length=1000)
+    specifications = models.CharField(max_length=5000, default="")
     publish_date = models.DateField()
     bid_ends = models.DateField()
     image = models.ImageField(upload_to='auctions/product_images', default='')

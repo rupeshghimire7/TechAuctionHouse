@@ -16,10 +16,10 @@ def login(request):
     return render(request, 'auctions/login.html')
 
 
-def items(request,title):
-    products = Product.objects.all()
-    titles = [product.product_name for product in products]
-    return render(request, 'auctions/items.html',{'item':titles})
+def items(request, id):
+    product = Product.objects.get(id=id)
+    specs = product.specifications.split('.')
+    return render(request, 'auctions/items.html', {'product':product , 'specs': specs})
 
 
 def about(request):
