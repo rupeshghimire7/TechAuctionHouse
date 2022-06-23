@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{% static 'auctions/contact.css' %}" />
 
     <title>Contact Us</title>
+    <script src="https://kit.fontawesome.com/6e45d4888f.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <nav name="nav-bar" class="header">
@@ -44,7 +45,31 @@
       </ul>
     </nav>
     <section class="root">
-      <h1>Contact Page</h1>
+      <h1 class="contact-title">Send us a message!</h1>
+      <div class="form-container">
+        <form name="contact-form" class="contact-form">
+          <div class="input-container">
+          <div class="input-row">
+            <i class="fa-solid fa-envelope"></i>
+            <input
+              name="username"
+              placeholder="Enter your name"
+              class="username-area"
+            />
+            <input
+              name="email"
+              placeholder="Enter your email"
+              class="email-area"
+            />
+          </div>
+          <textarea
+            name="message"
+            placeholder="Enter your message"
+            class="msg-area"
+          ></textarea>
+        </div>
+        </form>
+      </div>
     </section>
   </body>
 </html>
