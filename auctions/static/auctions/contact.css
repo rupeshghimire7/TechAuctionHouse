@@ -23,6 +23,7 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
+  /* position: relative; */
 }
 .username-area,
 .email-area,
@@ -43,8 +44,16 @@
   padding: 5px 0 5px 5px;
 }
 .username-area {
-  width: 30%;
+  width: 25%;
+  margin-right: 3px;
 }
 .email-area {
   width: 65%;
+  margin-left: 3px;
 }
+
+/* .mail-icon{
+  position: absolute;
+  top: 5px;
+  left:3px;
+} */
