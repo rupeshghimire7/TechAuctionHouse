@@ -4,7 +4,7 @@ from django.db import models
 class Product(models.Model):
     product_name = models.CharField(max_length=100)
     category = models.CharField(max_length=50)
-    price = models.FloatField()
+    price = models.FloatField(default=50000)
     description = models.CharField(max_length=1000)
     publish_date = models.DateField()
     bid_ends = models.DateField()

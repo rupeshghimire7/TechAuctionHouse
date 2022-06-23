@@ -27,8 +27,12 @@
         <h1 class="nav-title">Tech Auction House</h1>
       </a>
       <ul id="nav-menu">
-        <input type="text" name="search" class="search-bar" />
-        <button name="submit-search" class="search-btn">SEARCH</button>
+
+        <!--">-->
+          
+        </form>
+<!--<input type="text" name="search" class="search-bar" />
+        <button name="submit-search" class="search-btn">SEARCH</button>-->
 
         <li><a href="{% url 'contact' %}" class="nav-link">CONTACT</a></li>
         <li><a href="{% url 'about' %}" class="nav-link">ABOUT</a></li>
@@ -68,15 +72,16 @@
         <!--end of each card-->
 
         <!---beginning of each card-->
-{% for i in prod_names %}
-  <div class="card">
+{% for i in products %}
+<div class="card">
   <img
-    src="../static/images/macbook-pro-14-inch.jpg"
+    src="{{i.image.url}}"
     class="card--cover-image"
   />
   <div class="card-details">
-    <h4 class="card--title"> {{i.product_name}} "</h4>
+    <h4 class="card--title">{{i.product_name}}</h4>
   </div>
+  
 </div> 
 {% endfor %}
 

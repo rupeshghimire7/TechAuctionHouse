@@ -5,28 +5,11 @@ from .models import Product
 # Create your views here.
 def index(request):
     products = Product.objects.all()
-    prod_names = list(products.values('product_name'))
-    cats = list(products.values('category'))
-    C = []
-    for i in cats:
-        cat = list(i.values())
-        C.append(cat)
-    N = []
-    for i in prod_names:
-        prod = list(i.values())
-        N.append(prod)
-    names=[]
-    for i in N:
-        for j in i:
-            names.append(j)
-    print(names)
-    categories = []
-    for i in C:
-        for j in i:
-            categories.append(j)
-
-    item = {'products':names, 'category':categories}
-    return render(request, 'auctions/index.html',item)
+    for product in products:
+        title = product.product_name
+        print(title)
+    item = {'products':products}
+    return render(request, 'auctions/index.html', item)
 
 
 def login(request):
@@ -34,7 +17,9 @@ def login(request):
 
 
 def items(request,title):
-    return render(request, 'auctions/items.html',{'item':title})
+    products = Product.objects.all()
+    titles = [product.product_name for product in products]
+    return render(request, 'auctions/items.html',{'item':titles})
 
 
 def about(request):
@@ -43,4 +28,8 @@ def about(request):
 
 def contact(request):
     return render(request, 'auctions/contact.html')
+
+
+def signup(request):
+    return render(request, 'auctions\signup.html')
     
