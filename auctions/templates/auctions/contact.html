@@ -23,7 +23,7 @@
     <title>Contact Us</title>
     <script src="https://kit.fontawesome.com/6e45d4888f.js" crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body style="background-color: rgb(173, 86, 54);">
     <nav name="nav-bar" class="header">
       <a href="{% url 'index' %}">
         <h1 class="nav-title">Tech Auction House</h1>
@@ -45,31 +45,43 @@
       </ul>
     </nav>
     <section class="root">
-      <h1 class="contact-title">Send us a message!</h1>
+      <h1 class="contact-title">Contact Us!</h1>
+      <h2 class="contact-message">We are here to listen to all your queries.<br>We are all ears. <br>😃</h2>
       <div class="form-container">
         <form name="contact-form" class="contact-form">
           <div class="input-container">
-          <div class="input-row">
-            <i class="fa-solid fa-envelope"></i>
+          <div class="input-row-1">
+            
             <input
               name="username"
               placeholder="Enter your name"
               class="username-area"
             />
+          </div>
+          <br>
+          <div class="input-row-2">
+          <i></i>
             <input
               name="email"
               placeholder="Enter your email"
               class="email-area"
             />
           </div>
+          <br>
           <textarea
             name="message"
             placeholder="Enter your message"
             class="msg-area"
           ></textarea>
+          <div class="submit-button">
+            <input type="submit">
+          </div>
         </div>
         </form>
       </div>
     </section>
+    <br>
+    <br>
+    <div style="text-align: center; font-size: xx-small;" >All rights reserved.</div>
   </body>
 </html>
