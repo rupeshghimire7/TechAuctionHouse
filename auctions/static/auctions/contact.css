@@ -13,48 +13,23 @@
   background-color: #d9d9d9;
   width: 20%;
   margin: auto;
-  /* padding: 5px; */
-<<<<<<< HEAD
   border-radius: 5px;
   height: 50vh;
-=======
-  border-radius: 10px;
-  /* height: 50vh; */
-  padding: 70px 90px;
->>>>>>> 03682441c74c3c16a8f340e418abfbcb8d7507b3
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 10px 10px black;
   box-shadow: 10px 10px 8px 10px rgba(0, 0, 0, 0.2), 10px 10px 20px 10px rgba(0, 0, 0, 0.19);
 }
-<<<<<<< HEAD
 .input-boxes{
   width: 150%;
-=======
-.input-boxes {
-  width: 80%;
->>>>>>> 03682441c74c3c16a8f340e418abfbcb8d7507b3
 }
 .input-row-1 {
   width: 320%;
-  /* display: flex;
-  align-items: center;
-  justify-content: space-between;
-<<<<<<< HEAD
-  flex-wrap: nowrap; */
-=======
-  flex-wrap: nowrap;
-  /* position: relative; */
->>>>>>> 03682441c74c3c16a8f340e418abfbcb8d7507b3
 }
 
 .input-row-2 {
   width: 148%;
-  /* display: flex;
-  align-items: left; */
-  /* justify-content: space-between;
-  flex-wrap: nowrap; */
 }
 
 .submit-button {
@@ -93,9 +68,3 @@
   width: 65%;
   margin-left: 6px;
 }
-
-/* .mail-icon{
-  position: absolute;
-  top: 5px;
-  left:3px;
-} */
