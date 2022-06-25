@@ -2,28 +2,24 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="{% static 'images/favicon.ico' %}"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="{% static 'auctions/style.css' %}" />
     <link rel="stylesheet" href="{% static 'auctions/contact.css' %}" />
 
     <title>Contact Us</title>
     <script src="https://kit.fontawesome.com/6e45d4888f.js" crossorigin="anonymous"></script>
   </head>
-  <body style="background-color: rgb(173, 86, 54);">
+
+  <body>
     <nav name="nav-bar" class="header">
       <a href="{% url 'index' %}">
         <h1 class="nav-title">Tech Auction House</h1>
@@ -31,56 +27,53 @@
       <ul id="nav-menu">
         <input type="text" name="search" class="search-bar" />
         <button name="submit-search" class="search-btn">SEARCH</button>
-
         <li><a href="{% url 'contact' %}" class="nav-link">CONTACT</a></li>
         <li><a href="{% url 'about' %}" class="nav-link">ABOUT</a></li>
         <li>
           <a href="{% url 'login' %}" class="nav-link">
-            <img
-              src="{% static 'images/user.png' %}"
-              alt="user icon"
-              class="header--avatar-image"
-          /></a>
+            <img src="{% static 'images/user.png' %}" alt="user icon" class="header--avatar-image" /></a>
         </li>
       </ul>
     </nav>
     <section class="root">
-      <h1 class="contact-title">Contact Us!</h1>
-      <h2 class="contact-message">We are here to listen to all your queries.<br>We are all ears. <br>😃</h2>
+      <h1 class="contact-title">Got any queries?</h1>
+      <div class="contact-msg">
+        <p>We are all ears.</p>
+        <p>😃</p>
+      </div>
+      </h2>
       <div class="form-container">
         <form name="contact-form" class="contact-form">
-          <div class="input-container">
-          <div class="input-row-1">
-            <input
-              name="username"
-              placeholder="Your name"
-              class="username-area"
-            />
+          <div class="form-el">
+            <label for="fullname">Full Name</label>
+            <input name="fullname" placeholder="Your name" class="fullname-area input-boxes" autocomplete="on"
+              minlength="3" maxlength="40" required />
           </div>
-          <br>
-          <div class="input-row-2">
-          <i></i>
-            <input
-              name="email"
-              placeholder="Your email"
-              class="email-area"
-            />
+
+          <div class="form-el">
+            <label for="email">Email</label>
+            <input name="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" placeholder="Your email"
+              class="email-area input-boxes" maxlength="60" autocomplete="on" required />
           </div>
-          <br>
-          <textarea
-            name="message"
-            placeholder="Your message"
-            class="msg-area"
-          ></textarea>
-          <div class="submit-button">
-            <input type="submit">
+          <div class="form-el">
+            <label for="message">Message</label>
+            <textarea name="message" placeholder="Your message" class="msg-area input-boxes"></textarea>
           </div>
-        </div>
+          <button type="submit" class="submit-btn">SUBMIT</button>
         </form>
+        <hr class="vertical-line" />
+        <div class="contact-details">
+          <h2>Tech Auction House</h2>
+          <ul class="social-media-icons-list">
+          <li><a href="#" target="_blank" class="social-media-icon"><i class="fa-brands fa-facebook-square fa-2x"></i>
+          </a></li>
+          <li><a href="#" target="_blank" class="social-media-icon"><i class="fa-brands fa-instagram-square fa-2x"></i></a></li>
+          <li><a href="#" target="_blank" class="social-media-icon"><i class="fa-brands fa-github-square fa-2x"></i></a></li>
+        </ul>
+        </div>
       </div>
     </section>
-    <br>
-    <br>
-    <div style="text-align: center; font-size: xx-small;" >All rights reserved.</div>
+    <!-- <div style="text-align: center; font-size: xx-small;" >All rights reserved.</div> -->
   </body>
+
 </html>

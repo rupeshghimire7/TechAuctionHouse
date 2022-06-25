@@ -1,19 +1,24 @@
 /*all global styles go in this page*/
 * {
   font-family: Poppins, sans-serif;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
+
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
   color: #252422;
 }
+
 .root {
   margin: 0 20px;
 }
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -23,10 +28,12 @@ a {
   color: #252422;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
+
 .nav-title {
   margin-left: 20px;
   font-size: 30px;
 }
+
 .search-btn {
   margin: 0 5px;
   background-color: #f8f9fa;
@@ -35,6 +42,7 @@ a {
   border: 1px solid #252422;
   font-weight: 600;
 }
+
 .search-btn:hover {
   background-color: #252422;
   color: white;
@@ -42,20 +50,24 @@ a {
   cursor: pointer;
   transition-duration: 400ms;
 }
+
 #nav-menu {
   display: flex;
   justify-content: space-evenly;
   list-style-type: none;
   font-weight: 600;
 }
-#nav-menu > li {
+
+#nav-menu>li {
   margin: auto 25px;
   transition-duration: 500ms;
 }
-#nav-menu > li:hover {
+
+#nav-menu>li:hover {
   transform: scale(1.1, 1.1);
   transition-duration: 400ms;
 }
+
 .header--avatar-image {
   width: 25px;
 }

@@ -44,7 +44,7 @@
     </nav>
     <section class="root">
       <div class="form-container">
-        <h3 class="form-title">Sign Up</h3>
+        <h2 class="form-title">Sign Up</h2>
         <form
           name="signup-form"
           method="POST"
@@ -57,6 +57,9 @@
           <label for="password"> Password </label>
           <input name="password" type="password" required />
           <button type="submit" class="signup-btn">Sign Up</button>
+          <p class="change-form-text">
+            Already have an account? <a href="{% url 'login' %}" class="login-text">Log In</a>
+          </p>
         </form>
       </div>
     </section>
