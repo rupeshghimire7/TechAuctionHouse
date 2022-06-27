@@ -59,7 +59,6 @@
             <div class="item-specs-container">
               <h3>Specifications</h3>
               <p class="item-specs-list">
-
               </p>
               <ul>
               {% for spec in specs %}
@@ -67,6 +66,16 @@
               {% endfor %}
             </ul>
             </div>
+            <h3>Base Price:{{product.price}}</h3>
+          
+            <h3>Your Bid:
+              <form method = 'POST' action ="{% url 'items' product.id %}">
+                {% csrf_token %}
+                <input type="number" name="bid_price">
+                <input type="submit" placeholder="BID">
+              </form>
+            </h3>
+            <h3>Highest Bid: {{highest_bid}} </h3>
         </div>
       </div>
     </section>
