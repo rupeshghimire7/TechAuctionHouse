@@ -2,25 +2,21 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="{% static 'images/favicon.ico' %}"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="{% static 'auctions/style.css' %}" />
     <link rel="stylesheet" href="{% static 'auctions/index.css' %}" />
     <title>Tech Auction House</title>
   </head>
+
   <body>
     <nav name="nav-bar" class="header">
       <a href="{% url 'index' %}">
@@ -28,18 +24,14 @@
       </a>
       <ul id="nav-menu">
         </form>
-<!--<input type="text" name="search" class="search-bar" />
-        <button name="submit-search" class="search-btn">SEARCH</button>-->
+        <input type="text" name="search" class="search-bar" />
+        <button name="submit-search" class="search-btn">SEARCH</button>
 
         <li><a href="{% url 'contact' %}" class="nav-link">CONTACT</a></li>
         <li><a href="{% url 'about' %}" class="nav-link">ABOUT</a></li>
         <li>
           <a href="{% url 'login' %}" class="nav-link">
-            <img
-              src="{% static 'images/user.png' %}"
-              alt="user icon"
-              class="header--avatar-image"
-          /></a>
+            <img src="{% static 'images/user.png' %}" alt="user icon" class="header--avatar-image" /></a>
         </li>
       </ul>
     </nav>
@@ -56,24 +48,22 @@
       <!--card-category as title for each section of cards-container-->
       <div class="card-container">
         <!---beginning of each card-->
-{% for i in products %}
-<div class="card">
-  <a href="/items/{{i.id}}">
-    <img
-    src="{{i.image.url}}"
-    class="card--cover-image"
-  />
-  <div class="card-details">
-    <h3 class="card--title">{{i.product_name}}</h3>
-    <p class="card--desc">{{i.description}}</p>
-  </a>
-  </div>  
-</div> 
-{% endfor %}
+        {% for i in products %}
+        <div class="card">
+          <a href="/items/{{i.id}}">
+            <img src="{{i.image.url}}" class="card--cover-image" />
+            <div class="card-details">
+              <h3 class="card--title">{{i.product_name}}</h3>
+              <p class="card--desc">{{i.description}}</p>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
 
 
-        <!--end of each card-->
+      <!--end of each card-->
     </section>
     <!-- end of root section -->
   </body>
+
 </html>
