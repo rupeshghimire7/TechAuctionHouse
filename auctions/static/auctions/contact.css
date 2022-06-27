@@ -108,6 +108,7 @@
 
 .vertical-line {
   transform: rotate(90deg);
+  border: none;
   width: 200px;
   height: 5px;
   background-color: #252422;
