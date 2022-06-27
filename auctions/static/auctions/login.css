@@ -4,6 +4,7 @@ input {
   max-width: 500px;
   min-width: 170px;
 }
+
 button {
   margin: 7px;
   width: 75px;
@@ -12,32 +13,46 @@ button {
   align-self: center;
   margin: 15px;
 }
+
 .root {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  /* height: 55vh; */
 }
+
 .form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 20%;
-  margin: 10px auto;
+  justify-content: center;
+  width: 25%;
+  height: 50vh;
+  margin: 30px auto;
   background-color: #d9d9d9;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  transition-duration: 600ms;
 }
+
+.form-container:hover {
+  box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.8);
+  transition-duration: 600ms;
+}
+
 #login-form,
 #signup-form {
   display: flex;
   flex-direction: column;
 }
-.signup-text {
-  font-weight: 600;
+
+.signup-text, .login-text {
+  font-weight: 700;
 }
-.signup-text:hover {
+
+.signup-text:hover,.login-text:hover {
   text-decoration: underline;
 }
+
 .login-btn,
 .signup-btn {
   margin-top: 20px;
@@ -48,6 +63,7 @@ button {
   border: 1px solid #252422;
   font-weight: 600;
 }
+
 .login-btn:hover,
 .signup-btn:hover {
   background-color: #252422;

@@ -1,10 +1,133 @@
 /* styles for contact.html */
+.contact-title {
+  text-align: center;
+  font-size: 2em;
+  color: #000;
+  margin: 15px 0 6px 0;
+}
+
+.contact-msg {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.contact-msg>p {
+  margin: 3px;
+}
+
 .form-container {
   background-color: #d9d9d9;
+  width: 50%;
+  margin: 20px auto;
+  border-radius: 5px;
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  transition-duration: 700ms;
+}
+
+.form-container:hover {
+  box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.8);
+  transition-duration: 600ms;
+}
+
+.contact-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
-/* form{
-    
-} */
+
+.form-el {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+}
+
+.form-el>label {
+  /*label for each input element*/
+  font-size: 13px;
+  align-self: flex-start;
+}
+
+.input-boxes {
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 5px;
+  margin: 10px 5px;
+  width: 100%;
+  transition: all 0.6s;
+}
+
+.input-boxes:focus {
+  border-style: none none solid none;
+  border-color: navy;
+  outline: none;
+  transition-duration: 400ms;
+}
+
+.input-boxes::placeholder {
+  font-size: 0.9rem;
+}
+
+.input-boxes:valid {
+  border-color: green;
+}
+
+.input-boxes:invalid {
+  border-color: #e63946;
+}
+
+.msg-area {
+  min-height: 200px;
+  resize: none;
+}
+
+.submit-btn {
+  background-color: #f8f9fa;
+  color: #252422;
+  transition-duration: 600ms;
+  border: 1px solid #252422;
+  font-weight: 600;
+  padding: 5px 15px;
+}
+
+.submit-btn:hover {
+  background-color: #252422;
+  color: white;
+  border: 1px solid #252422;
+  cursor: pointer;
+  transition-duration: 400ms;
+}
+
+.vertical-line {
+  transform: rotate(90deg);
+  width: 200px;
+  height: 5px;
+  background-color: #252422;
+  margin: 0;
+}
+
+.contact-details {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.social-media-icons-list {
+  list-style: none;
+  display: flex;
+}
+
+.social-media-icons-list>li {
+  margin: 7px;
+}
