@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Product(models.Model):
@@ -11,4 +12,5 @@ class Product(models.Model):
     image = models.ImageField(upload_to='auctions/product_images', default='')
 
     def __str__(self):
-        return self.product_name
+        return  self.product_name
+

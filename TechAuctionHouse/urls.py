@@ -18,11 +18,10 @@ from django.urls import path, include
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
-from enroll import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('signup/',views.sign_up),
     path('', include('auctions.urls'))
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 

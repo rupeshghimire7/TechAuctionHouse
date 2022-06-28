@@ -1,5 +1,6 @@
 {% load static %}
 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -48,14 +49,23 @@
         <form
           name="signup-form"
           method="POST"
-          action=""
+          action="{% url 'index' %}"
           id="signup-form"
           class="form"
         >
+        {% csrf_token %}
           <label for="username"> Username </label>
           <input name="username" type="text" required />
-          <label for="password"> Password </label>
-          <input name="password" type="password" required />
+          <label for="first_name"> First Name </label>
+          <input name="first_name" type="text" required />
+          <label for="last_name"> Last Name </label>
+          <input name="last_name" type="text" required />
+          <label for="email"> Email</label>
+          <input name="email" type="email" required />
+          <label for="password1"> Password </label>
+          <input name="password1" type="password" required />
+          <label for="password2"> Confirm-Password </label>
+          <input name="password2" type="password" required />
           <button type="submit" class="signup-btn">Sign Up</button>
         </form>
       </div>

@@ -52,10 +52,11 @@
           id="login-form"
           class="form"
         >
+        {% csrf_token %}
           <label for="username"> Username </label>
           <input name="username" type="text" required />
-          <label for="password"> Password </label>
-          <input name="password" type="password" required />
+          <label for="password1"> Password </label>
+          <input name="password1" type="password" required />
           <button type="submit" class="login-btn">Log In</button>
           <p class="change-form-text">
             Don't have an account? <a href="#" class="signup-text">Sign Up</a>

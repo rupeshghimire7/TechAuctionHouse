@@ -1,5 +1,11 @@
-from django.shortcuts import render, HttpResponse
+from pyexpat.errors import messages
+from django.shortcuts import redirect, render, HttpResponse
+from sympy import content
 from .models import Product
+from .forms import SignUpForm
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.models import User
+from django.contrib import messages
 
 
 # Create your views here.
@@ -30,7 +36,20 @@ def index(request):
 
 
 def login(request):
-    return render(request, 'auctions/login.html')
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password2 = request.POST.get('password')
+
+        user = authenticate(request, username=username, password=password2)
+        if user is not None:
+            login(request, user)
+            fname = user.full_name
+            return render(request,"auctions/index.html",{'full_name':fname})
+        else:
+            messages.error(request,"Bad credientials!")
+            return redirect('auctions/index.html')
+    
+    return render(request, "auctions/login.html")
 
 
 def items(request,title):
@@ -43,4 +62,48 @@ def about(request):
 
 def contact(request):
     return render(request, 'auctions/contact.html')
+
+def signup(request):
     
+    if request.method == 'POST':
+        username = request.POST['username']
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        email = request.POST['email']
+        password1 = request.POST['password1']
+        password2 = request.POST['password2']
+
+        if User.objects.filter(username=username):
+            messages.error(request,"username already exist ! please try some other username")
+            return redirect('home')
+
+        if User.objects.filter(email=email):
+            messages.error(request, "Email already regeistered !")
+            return redirect("home")
+
+        if len(username)>10:
+            messages.error(request,"username must be ub=nder 10 character !")
+
+        if password1 != password2 :
+            messages.error(request, "password didn't match")
+
+        
+
+        myuser = User.objects.create_user(username, email,password1)
+        myuser.first_name = first_name
+        myuser.last_name = last_name
+
+        myuser.save()
+
+        messages.success(request, "Your account has been created successfully.")
+
+        return redirect('auctions/login.html')
+
+
+    return render(request, "auctions/signup.html")
+
+
+def signout(request):
+    logout(request)
+    messages.success(request, "logged out successfully")
+    return redirect('home')
